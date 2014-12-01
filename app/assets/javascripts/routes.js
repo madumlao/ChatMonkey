@@ -238,9 +238,9 @@
   edit_user_registration_path: function(options) {
   return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"users",false]],[7,"/",false]],[6,"edit",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
   },
-// fetch_msgs => /msgs/fetch(.:format)
+// fetch_msgs => /chatrooms/:id/msgs(.:format)
   fetch_msgs_path: function(options) {
-  return Utils.build_path([], ["format"], [2,[2,[2,[2,[7,"/",false],[6,"msgs",false]],[7,"/",false]],[6,"fetch",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
+  return Utils.build_path(["id"], ["msg_id"], [2,[2,[2,[2,[2,[2,[7,"/",false],[6,"chatrooms",false]],[7,"/",false]],[3,"id",false]],[7,"/",false]],[6,"msgs",false]],[1,[2,[8,".",false],[3,"format",false]],false]], arguments);
   },
 // full_chatroom => /chatrooms/:id/full(.:format)
   full_chatroom_path: function(_id, options) {

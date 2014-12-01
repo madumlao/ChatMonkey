@@ -10,16 +10,10 @@ Chat::Application.routes.draw do
   end
 
   resources :chatrooms do
-    resources :msgs, only: [:create]
+    resources :msgs, only: [:create, :index]
     resources :users, only: [:create]
     member do
       get "full"
-    end
-  end
-
-  resources :msgs, only: [] do
-    collection do
-      get "fetch"
     end
   end
 

@@ -18,9 +18,12 @@ class MsgsController < ApplicationController
       format.js { render :nothing => true }
     end
   end
-
-  def fetch
-    @msgs = Msg.where "id > ? AND chatroom_id = ?", params[:msg_id], params[:chatroom_id]
+  
+  def index
+    @msgs = Msg.where chatroom_id: params[:chatroom_id]
+    if params[:msg_id].present?
+      @msgs = @msgs.where 'id > ?', params[:msg_id]
+    end
     respond_with @msgs
   end
 end

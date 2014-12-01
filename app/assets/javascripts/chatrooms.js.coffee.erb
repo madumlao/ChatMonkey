@@ -55,7 +55,7 @@ updateChatroom = ->
   chatroom_id = $("#chatroom-id").html()
   msg_id      = $("#last-msg-id").html()
   user_email  = $("#current-user").html()
-  url         = "/msgs/fetch.json?msg_id=#{msg_id}&chatroom_id=#{chatroom_id}"
+  url         = "/chatrooms/#{chatroom_id}/msgs.json?msg_id=#{msg_id}"
   $.getJSON(url, (data) ->
     items = []
     last = msg_id
