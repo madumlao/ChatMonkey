@@ -14,6 +14,8 @@ gem 'rdiscount', '~> 2.1.6'
 
 gem 'js-routes', '~> 0.9.3'
 
+gem 'puma', '~> 2.10.2'
+
 group :assets do
   gem 'sass-rails', '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
